@@ -9,9 +9,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="w-full max-w-xl flex flex-col items-center gap-8">
+      <div className="w-full max-w-xl flex flex-col items-center gap-4">
+        <h1 className="text-9xl text-(--accent) font-sans font-bold">tma.</h1>
         {/* Toggle */}
-        <div className="relative flex bg-[var(--muted)] rounded-full p-1 w-64">
+        <div className="relative flex bg-[var(--muted)] rounded-full p-1 w-full">
           <div
             className={`absolute top-1 bottom-1 w-1/2 rounded-full bg-[var(--background)] shadow-sm transition-all duration-300 ${
               mode === "tell" ? "left-1" : "left-1/2"
@@ -50,9 +51,9 @@ export default function Home() {
 
           {/* Fold effect */}
           <div
-            className={`pointer-events-none absolute bottom-0 right-0 w-15 h-15 ${hasText ? "" : "translate-10"}`}
+            className={`pointer-events-none absolute bottom-0 right-0 w-15 h-15 transition-all duration-200 ${hasText ? "" : "translate-15"}`}
           >
-            <div className="w-full h-full bg-[var(--background)] rounded-tl-2xl shadow-inner" />
+            <div className="w-full h-full bg-[var(--background)] rounded-tl-2xl" />
           </div>
 
           {/* Send Button */}
